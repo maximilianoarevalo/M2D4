@@ -75,6 +75,9 @@ const propiedades_alquiler = [
 // Se obtiene el elemento contenedor de las cards venta
 const cardSellContainer = document.getElementById("contenedor-ventas");
 
+// Variable para renderizar cards venta en html
+let cardSellRender = '';
+
 // Renderizado de propiedades a la venta
 for (let i = 0; i < propiedades_venta.length; i++) {
  // Se define el color y el texto si se permite fumar/mascotas y se agrega su color con clases de bootstrap
@@ -115,14 +118,19 @@ for (let i = 0; i < propiedades_venta.length; i++) {
           </div>
     `;
   // Se va concatenando el contenido anterior, para que no se reemplace ni se pierda en cada iteracion
-  cardSellContainer.innerHTML = cardSellContainer.innerHTML + template;
+  cardSellRender += template;
 }
+//Se renderizan las cards en la pagina
+cardSellContainer.innerHTML = cardSellRender;
 
 
 // PROPIEDADES ALQUILER:
 
 // Se obtiene el elemento contenedor de las cards alquiler
 const cardRentContainer = document.getElementById("contenedor-alquiler");
+
+// Variable para renderizar cards alquiler en html
+let cardRentRender = '';
 
 // Renderizado de propiedades a la venta
 for (let i = 0; i < propiedades_alquiler.length; i++) {
@@ -164,5 +172,7 @@ for (let i = 0; i < propiedades_alquiler.length; i++) {
           </div>
     `;
   // Se va concatenando el contenido anterior, para que no se reemplace ni se pierda en cada iteracion
-  cardRentContainer.innerHTML = cardRentContainer.innerHTML + template;
+  cardRentRender += template;
 }
+//Se renderizan las cards en la pagina
+cardRentContainer.innerHTML = cardRentRender;

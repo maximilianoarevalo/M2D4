@@ -73,6 +73,9 @@ const propiedades_venta = [
   // Se obtiene el elemento contenedor de las cards venta
   const cardSellContainer = document.getElementById("contenedor-ventas");
   
+  // Variable para renderizar cards venta en html
+  let cardSellRender = '';
+
   // Renderizado de propiedades a la venta
   for (let i = 0; i < propiedades_venta.length; i++) {
    // Se define el color y el texto si se permite fumar/mascotas y se agrega su color con clases de bootstrap
@@ -113,6 +116,8 @@ const propiedades_venta = [
             </div>
       `;
     // Se va concatenando el contenido anterior, para que no se reemplace ni se pierda en cada iteracion
-    cardSellContainer.innerHTML = cardSellContainer.innerHTML + template;
-  }
+  cardSellRender += template;
+}
+//Se renderizan las cards en la pagina
+cardSellContainer.innerHTML = cardSellRender;
   

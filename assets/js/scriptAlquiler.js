@@ -73,6 +73,9 @@ const propiedades_alquiler = [
 // Se obtiene el elemento contenedor de las cards alquiler
 const cardRentContainer = document.getElementById("contenedor-alquiler");
 
+// Variable para renderizar cards alquiler en html
+let cardRentRender = '';
+
 // Renderizado de propiedades a la venta
 for (let i = 0; i < propiedades_alquiler.length; i++) {
     // Se define el color y el texto si se permite fumar/mascotas y se agrega su color con clases de bootstrap
@@ -113,5 +116,7 @@ for (let i = 0; i < propiedades_alquiler.length; i++) {
             </div>
         `;
     // Se va concatenando el contenido anterior, para que no se reemplace ni se pierda en cada iteracion
-    cardRentContainer.innerHTML = cardRentContainer.innerHTML + template;
+  cardRentRender += template;
 }
+//Se renderizan las cards en la pagina
+cardRentContainer.innerHTML = cardRentRender;
