@@ -38,7 +38,7 @@ export function renderizarPropiedadesVenta(propiedades_venta) {
                   </p>
                   <p>
                     <i class="fas fa-bed"></i> ${propiedades_venta[i].habitaciones} Habitaciones |
-                    <i class="fas fa-bath"></i> 4 Baños
+                    <i class="fas fa-bath"></i> ${propiedades_venta[i].banos} Baños
                   </p>
                   <p><i class="fas fa-dollar-sign"></i> ${propiedades_venta[i].costo}</p>
                   ${allowSmoke}
